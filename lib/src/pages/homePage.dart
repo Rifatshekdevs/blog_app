@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:news_api/src/configs/appColors.dart';
 import 'package:news_api/src/controllers/home_controller.dart.dart';
-import 'package:news_api/src/pages/addNewNewsPage.dart';
-import 'package:news_api/src/pages/newsDetailsPage.dart';
+import 'package:news_api/src/pages/add_blog_page.dart';
+import 'package:news_api/src/pages/blog_details_page.dart.dart';
 import 'package:news_api/src/widgets/kText.dart';
 import 'package:news_api/src/widgets/notFound.dart';
 import 'package:news_api/src/widgets/shammerWidget.dart';
@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {
-                Get.to(AddNewNewsPage())?.then((value){
+                Get.to(AddBlogPage())?.then((value){
                   if (value==true) {
                     newsC.getBlog();   // Refresh news list
 
@@ -85,7 +85,7 @@ class HomePage extends StatelessWidget {
                           if (allBlog != null) {
                             return GestureDetector(
                               onTap: () => Get.to(
-                                NewsDetailsPage(
+                                BlogDetailsPage(
                                   allNews: allBlog,
                                 ),
                               ),

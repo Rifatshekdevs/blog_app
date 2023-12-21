@@ -8,18 +8,18 @@ import 'package:news_api/src/controllers/home_details_controller.dart';
 import 'package:news_api/src/models/get_blog_model.dart';
 import 'package:news_api/src/widgets/kText.dart';
 
-class UpdateNewsPage extends StatefulWidget {
+class UpdateBlogPage extends StatefulWidget {
   final Datum allNews;
   final int id;
-  UpdateNewsPage({
+  UpdateBlogPage({
     required this.allNews, required this.id,
   });
 
   @override
-  State<UpdateNewsPage> createState() => _UpdateNewsPageState();
+  State<UpdateBlogPage> createState() => _UpdateBlogPageState();
 }
 
-class _UpdateNewsPageState extends State<UpdateNewsPage> {
+class _UpdateBlogPageState extends State<UpdateBlogPage> {
 
 
   @override

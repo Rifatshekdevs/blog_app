@@ -6,12 +6,12 @@ import 'package:news_api/src/configs/appColors.dart';
 import 'package:news_api/src/controllers/home_controller.dart.dart';
 import 'package:news_api/src/widgets/kText.dart';
 
-class AddNewNewsPage extends StatefulWidget {
+class AddBlogPage extends StatefulWidget {
   @override
-  State<AddNewNewsPage> createState() => _AddNewNewsPageState();
+  State<AddBlogPage> createState() => _AddBlogPageState();
 }
 
-class _AddNewNewsPageState extends State<AddNewNewsPage> {
+class _AddBlogPageState extends State<AddBlogPage> {
   final _formKey = GlobalKey<FormState>();
 
   final HomeController newsC = Get.put(HomeController());

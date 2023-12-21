@@ -8,20 +8,20 @@ import 'package:news_api/src/configs/appColors.dart';
 import 'package:news_api/src/controllers/home_controller.dart.dart';
 import 'package:news_api/src/controllers/home_details_controller.dart';
 import 'package:news_api/src/models/get_blog_model.dart';
-import 'package:news_api/src/pages/updateNewsPage.dart';
+import 'package:news_api/src/pages/update_blog_page.dart';
 import 'package:news_api/src/widgets/kText.dart';
 
-class NewsDetailsPage extends StatefulWidget {
+class BlogDetailsPage extends StatefulWidget {
   final Datum allNews;
-  NewsDetailsPage({
+  BlogDetailsPage({
     required this.allNews,
   });
 
   @override
-  State<NewsDetailsPage> createState() => _NewsDetailsPageState();
+  State<BlogDetailsPage> createState() => _BlogDetailsPageState();
 }
 
-class _NewsDetailsPageState extends State<NewsDetailsPage> {
+class _BlogDetailsPageState extends State<BlogDetailsPage> {
   HomeDetailsController homeDetailsC = Get.put(HomeDetailsController());
   HomeController homeC = Get.put(HomeController());
 
@@ -44,7 +44,7 @@ class _NewsDetailsPageState extends State<NewsDetailsPage> {
         actions: [
           IconButton(
             onPressed: () {
-              Get.to(UpdateNewsPage(
+              Get.to(UpdateBlogPage(
                 id: widget.allNews.id!.toInt(),
                 allNews: widget.allNews,
               ))?.then((value) {
